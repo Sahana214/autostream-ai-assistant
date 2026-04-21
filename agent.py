@@ -1,7 +1,8 @@
 from tools import mock_lead_capture
 from rag import retrieve_answer
 from langchain.memory import ConversationBufferMemory
-# LangChain Memory
+from langchain.memory.buffer import ConversationBufferMemory
+
 memory = ConversationBufferMemory()
 
 def detect_intent(text):
@@ -16,7 +17,6 @@ def detect_intent(text):
         return "high_intent"
 
     return "unknown"
-
 
 def agent_response(user_input, state):
     if state.stage == "ask_name":
