@@ -7,7 +7,6 @@ memory = ConversationBufferMemory()
 
 def detect_intent(text):
     text = text.lower()
-
     if any(x in text for x in ["hi", "hello"]):
         return "greeting"
 
@@ -21,8 +20,6 @@ def detect_intent(text):
 
 
 def agent_response(user_input, state):
-
-    # Continue Lead Flow
     if state.stage == "ask_name":
         state.name = user_input
         state.stage = "ask_email"
@@ -57,7 +54,6 @@ def agent_response(user_input, state):
         else:
             response = "I can help with AutoStream pricing, plans, and features."
 
-    # Save to LangChain memory
     memory.save_context({"input": user_input}, {"output": response})
 
     return response
