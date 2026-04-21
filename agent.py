@@ -1,6 +1,6 @@
 from tools import mock_lead_capture
 from rag import retrieve_answer
-from langchain.memory.buffer import ConversationBufferMemory
+from langchain.memory import ConversationBufferMemory
 memory = ConversationBufferMemory()
 
 def detect_intent(text):
