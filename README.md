@@ -24,6 +24,11 @@ An AI-powered conversational assistant built with Streamlit and LangChain that h
 - Rule-Based Intent Detection
 
 ---
+## 📦 Requirements
+
+```txt
+streamlit
+langchain==0.2.17
 
 ## 📂 Project Structure
 
@@ -34,3 +39,7 @@ An AI-powered conversational assistant built with Streamlit and LangChain that h
 ├── state.py
 ├── tools.py
 └── README.md
+##OUTPUT SCREENSHOTS
+![OUTPUT 1](ai1.png)
+![OUTPUT 2](ai2.png)
+![OUTPUT 3](ai3.png)
